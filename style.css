@@ -37,19 +37,23 @@ ul {
 }
 
 .navbar__header {
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
-  margin-bottom: 1rem;
   border-bottom: 1px solid #f4f4f4;
 }
 
+.navbar__list {
+  width: 100%;
+}
+
 .navbar__list-item {
-  margin: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f4f4f4;
 }
 
 .nav-link {
   color: #fff;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 /* Main Section styles */
