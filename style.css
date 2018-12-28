@@ -16,7 +16,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #333;
 }
 
 ul {
@@ -47,13 +46,21 @@ ul {
 }
 
 .navbar__list-item {
-  padding: 1rem;
   border-bottom: 1px solid #f4f4f4;
 }
 
+.navbar__list-item:hover,
+.navbar__list-item:focus {
+  background: #fff;
+  color: #333;
+}
+
 .nav-link {
-  color: #fff;
-  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  padding: 1rem;
 }
 
 /* Main Section styles */
