@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html,
@@ -30,10 +31,24 @@ ul {
 
 .navbar {
   min-width: 300px;
+  height: 100vh;
+  background: #333;
+  color: #fff;
+}
+
+.navbar__header {
   padding: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.navbar__list-item {
+  margin: 1rem;
 }
 
 .nav-link {
+  color: #fff;
   padding: 1rem;
 }
 
