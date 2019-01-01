@@ -52,11 +52,15 @@ The `margin` property can accept negative values, causing elements to overlap.
 
 When elements are stacked vetically on a page and their vertical margins touch, margin collapsing can occur. Here the margin between the two elements is not the total of the two margins but simply whatever the bigger margin is. So, an element with `margin-bottom: 20px;` and an element with `margin-top: 15px;` will have a margin between them of 20px, not 35px.
 
+Margin collapsing does not happen to horizontal margins.
+
 If the two margins are equal, the total margin will simply be the margin of one of the elements.
 
 If one margin is negative, it is subtracted from the positive margin to leave the total margin.
 
 If both margins are negative, the total will be the most negative margin.
+
+In the same way, margin collapsing happens when the vertical margin of a child element meets the vertical margin of its parent element. The child element's margin will be overridden by its parent's margin. This can be prevented by seperating the margins of the parent and child elements by adding padding or border to the parent element.
 
 ### Box-sizing
 
