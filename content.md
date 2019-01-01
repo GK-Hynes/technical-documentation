@@ -50,7 +50,7 @@ The `margin` property can accept negative values, causing elements to overlap.
 
 #### Sidenote: Margin Collapsing
 
-When elements are stacked vetically on a page and their vertical margins touch, margin collapsing can occur. Here the margin between the two elements is not the total of the two margins but simply whatever the bigger margin is. So, an element with `margin-bottom: 20px;` and an element with `margin-top: 15px;` will have a margin between them of 20px, not 35px.
+When elements are stacked vetically on a page and their vertical margins touch, margin collapsing can occur. Here the margin between the two elements is not the total of the two margins but simply whatever the bigger margin is. So, an element with `margin-bottom: 20px;` and the next element with `margin-top: 15px;` will have a margin between them of 20px, not 35px.
 
 Margin collapsing does not happen to horizontal margins.
 
@@ -63,6 +63,12 @@ If both margins are negative, the total will be the most negative margin.
 In the same way, margin collapsing happens when the vertical margin of a child element meets the vertical margin of its parent element. The child element's margin will be overridden by its parent's margin. This can be prevented by seperating the margins of the parent and child elements by adding padding or border to the parent element.
 
 ### Box-sizing
+
+The `box-sizing` property tells the browser how it should calculate the total width and height of an element. By default, `box-sizing` is set to `content-box`. That means that the width and height you assign to an element are only applied to the content and then padding and border are added on top. An element with a `width` of 500px, `padding` of 25px and `border` of 5px, will have an actual total width of 560px.
+
+By setting `box-sizing` to `border-box`, the browser will factor padding and border into the values you specify for `width` and `height`, and so removes the need for extra calculations. The content box will shrink so that total width and height matches the `width` and `height` values. This makes sizing easier and so `box-sizing: border-box;` is often included in CSS resets.
+
+![Screenhsot of two divs demonstrating the box-sizing property](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546372213/box-sizing_ufd0ly.png)
 
 ## CSS Positioning
 
