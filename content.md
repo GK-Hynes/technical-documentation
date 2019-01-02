@@ -82,11 +82,17 @@ The CSS `position` property lets you take elements out of the normal flow and po
 
 `position` can take a number of values:
 
-### Static
+- static
+- relative
+- absolute
+- fixed
+- sticky
+
+### Static Positioning
 
 The default value for the `position` property is `static`. A statically positioned element will appear in its normal position in the document layout flow and scrolls when you scroll the page.
 
-### Relative
+### Relative Positioning
 
 Relative positioning places an element "relative" to its normal posiiton in the layout flow. By itself, `position: relative` won't make an change to where an element appears on the page. It still occupies its normal place in the layout, just as if it was positioned statically.
 
@@ -106,7 +112,31 @@ div {
 
 ![Screenshot of two divs demonstrating posiiton relative](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546462658/position-relative_fsmuhp.png);
 
-Other elements will not move away from the new position of the relatively positioned element (as far as they are concerned, it is still in its normal position). As such, relative positioning can cause elements to overlap. See `z-index`.
+Other elements will not move away from the new position of the relatively positioned element (as far as they are concerned, it is still in its normal position). Relatively positoned elements will appear on top of statically positioned elements. See `z-index`.
+
+### Absolute Positioning
+
+Absolute positioning removes an element from its normal position in the layout flow altogether and places it on its own layer. As far as the other elements are concerned, it no longer exists, and so elements coming after it in the HTML document will move up to occupy its now "empty" position.
+
+An absolutely positioned element doesn't affect the position of other elements and isn't affected by them. This can be useful when creating isolated UI elements such as popups and modals.
+
+![Screenshot of two divs demonstrating absolute positioning](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546463237/position-absolute_gxui2t.png)
+
+Like with relatively positioned elements, absolutely positioned elements can be moved around using the `top`, `right`, `bottom` and `left` offset prpoerties.
+
+But there is an important difference.
+
+With relatively positioned elements, the offsets tell it how far to move in a particular direction away from to its normal position.
+
+With absolutely positioned elements, the offsets tell it how far it should be from each side of the element that contains it.
+
+#### Positioning Context
+
+The "containing element" of an absolutely positioned element is determined by the position properties of its parent elements.
+
+If all of the ancestor elements of the abolsutely positioned element are statically positioned (for example, if their position properties aren't explicitly defined), then its "containing element" is the `html` element, which in practice means the viewport.
+
+If you don't want the absolutely positoned element to be positioned according to the viewport, you need to give one of its ancestor elements a position other than static, usually by setting its parent element to `position: relative`.
 
 ## Z-index
 
