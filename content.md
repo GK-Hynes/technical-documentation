@@ -1,6 +1,6 @@
 # Introduction
 
-As far as CSS is concerned, every element on a webpage is a box. You can see this by opening the developer tools, going to the inspector tab, then the styles tab, and adding `border: 1px solid red;` to `*` (the CSS selector that means all elements).
+As far as HTML and CSS are concerned, every element on a webpage is a box. You can see this by opening the developer tools, going to the inspector tab, then the styles tab, and adding `border: 1px solid red;` to `*` (the CSS selector that means all elements).
 
 ![Screenshot of freeCodeCamp Basic CSS page with elements outlined in red](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546287889/Screenshot_2018-12-31_Basic_CSS_freeCodeCamp_imqecp.png)
 
@@ -62,6 +62,10 @@ If both margins are negative, the total will be the most negative margin.
 
 In the same way, margin collapsing happens when the vertical margin of a child element meets the vertical margin of its parent element. The child element's margin will be overridden by its parent's margin. This can be prevented by seperating the margins of the parent and child elements by adding padding or border to the parent element.
 
+### Overflow
+
+### Outline
+
 ### Box-sizing
 
 The `box-sizing` property tells the browser how it should calculate the total width and height of an element. By default, `box-sizing` is set to `content-box`. That means that the width and height you assign to an element are only applied to the content and then padding and border are added on top. An element with a `width` of 500px, `padding` of 25px and `border` of 5px, will have an actual total width of 560px.
@@ -71,6 +75,38 @@ By setting `box-sizing` to `border-box`, the browser will factor padding and bor
 ![Screenhsot of two divs demonstrating the box-sizing property](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546372213/box-sizing_ufd0ly.png)
 
 ## CSS Positioning
+
+HTML without CSS will display each element one after another down the page in the order they appear in the HTML file. This is the normal layout flow of the document.
+
+The CSS `position` property lets you take elements out of the normal flow and position them where you want them to be, for example overlapping each other, or stuck to the browser viewport.
+
+`position` can take a number of values:
+
+### Static
+
+The default value for the `position` property is `static`. A statically positioned element will appear in its normal position in the document layout flow and scrolls when you scroll the page.
+
+### Relative
+
+Relative positioning places an element "relative" to its normal posiiton in the layout flow. By itself, `position: relative` won't make an change to where an element appears on the page. It still occupies its normal place in the layout, just as if it was positioned statically.
+
+![Screenshot of two divs positioned relative and fixed](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546462467/relative-no-offsets_laxqai.png)
+
+However, once an element is positioned relative, you can use the `top`, `right`, `bottom` and `left` properties (the offset properties) to move it around. The offset properties push an element away from its normal position.
+
+The following code will move an element down 50px and right 50px.
+
+```css
+div {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+```
+
+![Screenshot of two divs demonstrating posiiton relative](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546462658/position-relative_fsmuhp.png);
+
+Other elements will not move away from the new position of the relatively positioned element (as far as they are concerned, it is still in its normal position). As such, relative positioning can cause elements to overlap. See `z-index`.
 
 ## Z-index
 
