@@ -130,14 +130,34 @@ With relatively positioned elements, the offsets tell it how far to move in a pa
 
 With absolutely positioned elements, the offsets tell it how far it should be from each side of the element that contains it.
 
-#### Positioning Context
+#### Absolute Positioning and Positioning Context
 
 The "containing element" of an absolutely positioned element is determined by the position properties of its parent elements.
 
-If all of the ancestor elements of the abolsutely positioned element are statically positioned (for example, if their position properties aren't explicitly defined), then its "containing element" is the `html` element, which in practice means the viewport.
+If all of the ancestor elements of the abolsutely positioned element are statically positioned (for example, if their position properties aren't explicitly defined), then its "containing element" is the `<html>` element, which in practice means the viewport.
 
-If you don't want the absolutely positoned element to be positioned according to the viewport, you need to give one of its ancestor elements a position other than static, usually by setting its parent element to `position: relative`.
+If you don't want the absolutely positoned element to be positioned according to the viewport, you need to give one of its ancestor elements a position other than static, usually by setting one of its ancestor elements to `position: relative`, for example the `<body>` element. You can then move the absolutely positioned element away from its "containing element" using the `top`, `right`, `bottom` and `left` offsets.
+
+In the first screenshot below the container is positioned statically and so the absolutely positioned div's offsets position it in relation to the viewport.
+
+In the second screenshot, the container is positioned relatively and so the absolutely positioned div's offsets position it in relation to the container.
+
+![Screenshot of an absolutely positioned div inside a statically positioned container](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546548991/absolute-element-with-static-container_eqli2d.png)
+
+![Screenshot of absolutely positoned div inside a relatively positioned container](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549063/absolute-element-with-relative-container_cl43ks.png)
 
 ## Z-index
+
+Moving an element away from its "normal" positioning can cause elements to overlap. By default, realtively or absolutely positioned elements appear on top of statically positioned elements.
+
+The property which allows you to decide which element appears on top is the `z-index`.
+
+While offsets move around elements on the x-axis and y-axis, `z-index` moves elements on the z-axis, that is, closer to the screen or away from it.
+
+By default, all positioned elements have a `z-index` of `auto`, which is the same as setting the `z-index`to 0. Statically positioned elements cannot take a `z-index` value.
+
+Higher `z-index` values make elements appear closer to the screen and lower `z-index` values make them appear further back. You can set `z-index` to negative values to put an element behind another element.
+
+![Screenshot of two divs demonstrating z-index](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549449/z-index_nva7qn.png)
 
 ## Further Resources
