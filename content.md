@@ -163,7 +163,7 @@ Elements that are positioned fixed can also be moved around using the `top`, `ri
 }
 ```
 
-![Screenshot of divs and navbar demonstrating position fixed](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546550486/position-fixed_tb3t8u.png)
+![Screenshot of divs and navbar demonstrating position fixed](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546551342/position-fixed_elsjfx.png)
 
 ### Sticky Positioning
 
