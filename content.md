@@ -146,13 +146,34 @@ In the second screenshot, the container is positioned relatively and so the abso
 
 ![Screenshot of absolutely positoned div inside a relatively positioned container](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549063/absolute-element-with-relative-container_cl43ks.png)
 
+### Fixed Positoning
+
+Fixed positioning works in a similar way to absolute positioning. While absolute positioning places an element in relation to either the `<html>` element or an ancestor element that isn't statically positioned, fixed positioning places an element in relation to the viewport.
+
+When the page is scrolled, the fixed element stays in place on the viewport and other elements scroll past it. This is useful for putting UI items in a fixed place, such as the navbar at the top of the viewport.
+
+Like with absolute positioning, fixed positioning takes the element out of the normal layout flow and other elements will move up to fill its "empty" position.
+
+Elements that are positioned fixed can also be moved around using the `top`, `right`, `bottom` and `left` offsets. You might position a navbar at the top of the viewport using:
+
+```css
+.navbar {
+  position: fixed;
+  top: 0;
+}
+```
+
+![Screenshot of divs and navbar demonstrating position fixed](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546550486/position-fixed_tb3t8u.png)
+
+### Sticky Positioning
+
 ## Z-index
 
-Moving an element away from its "normal" positioning can cause elements to overlap. By default, realtively or absolutely positioned elements appear on top of statically positioned elements.
+Moving an element away from its "normal" positioning can cause elements to overlap. By default, positioned elements (those given a `position` value such as `relative` or `absolute`) appear on top of static elements.
 
 The property which allows you to decide which element appears on top is the `z-index`.
 
-While offsets move around elements on the x-axis and y-axis, `z-index` moves elements on the z-axis, that is, closer to the screen or away from it.
+While offsets move elements around on the x-axis and y-axis, `z-index` moves elements on the z-axis, that is, closer to the screen or further away from it.
 
 By default, all positioned elements have a `z-index` of `auto`, which is the same as setting the `z-index`to 0. Statically positioned elements cannot take a `z-index` value.
 
@@ -161,3 +182,7 @@ Higher `z-index` values make elements appear closer to the screen and lower `z-i
 ![Screenshot of two divs demonstrating z-index](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549449/z-index_nva7qn.png)
 
 ## Further Resources
+
+```
+
+```
