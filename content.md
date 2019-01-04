@@ -167,6 +167,21 @@ Elements that are positioned fixed can also be moved around using the `top`, `ri
 
 ### Sticky Positioning
 
+Sticky positioning is newer than the other types of positioning. It basically allows an element to behave like it is relatively positioned until it reaches a certain distance from the top of the viewport (defined by its offsets) at which time is acts like it has fixed positioning.
+
+This could be used to cause a nav or a media player to scroll with the rest of the page until it reaches the top of the viewport and then stick there.
+
+The following code will cause an element to stick to the viewport once it reaches 20px from the top of the viewport.
+
+```css
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+```
+
+![Gif of four divs demonstrating sticky positioning]()
+
 ## Z-index
 
 Moving an element away from its "normal" positioning can cause elements to overlap. By default, positioned elements (those given a `position` value such as `relative` or `absolute`) appear on top of static elements.
@@ -182,7 +197,3 @@ Higher `z-index` values make elements appear closer to the screen and lower `z-i
 ![Screenshot of two divs demonstrating z-index](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549449/z-index_nva7qn.png)
 
 ## Further Resources
-
-```
-
-```
