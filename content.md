@@ -197,3 +197,19 @@ Higher `z-index` values make elements appear closer to the screen and lower `z-i
 ![Screenshot of two divs demonstrating z-index](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549449/z-index_nva7qn.png)
 
 ## Further Resources
+
+[Andrew, Rachel, "Getting Started With CSS Layout", Smashing Magazine](https://www.smashingmagazine.com/2018/05/guide-css-layout/)
+
+[Eygi, Cem, "How to use the position property in CSS to align elements", freeCodeCamp Medium Publication](https://medium.freecodecamp.org/how-to-use-the-position-property-in-css-to-align-elements-d8f49c403a26)
+
+[Kononenko, Kevin, "CSS Positioning Explained By Building An Ice Cream Sundae", freeCodeCamp Medium Publication](https://medium.freecodecamp.org/css-positioning-explained-by-building-an-ice-cream-sundae-831cb884bfa9)
+
+[Kononenko, Kevin, "The CSS Box Model Explained by Living in a Boring Suburban Neighborhood", freeCodeCamp Medium Publication](https://medium.freecodecamp.org/css-box-model-explained-by-living-in-a-boring-suburban-neighborhood-9a9e692773c1)
+
+["Positioning", MDN Learn Web Development](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+
+["Position", MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+
+[Smith, Bryan, "Unboxing the basics of the CSS BoX Model", freeCodeCamp Medium Publication](https://medium.freecodecamp.org/css-box-model-b3e68ceea756)
+
+["The Box Model", MDN Learn Web Development](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model)
