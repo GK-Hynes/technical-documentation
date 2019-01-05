@@ -19,13 +19,10 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style: none;
-}
-
 img {
   width: 100%;
   max-width: 400px;
+  margin-bottom: 1rem;
 }
 
 h2,
@@ -33,6 +30,18 @@ h3,
 h4,
 p {
   margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 code {
@@ -63,6 +72,7 @@ code {
 .navbar__list {
   height: calc(100% - 85px);
   overflow-y: auto;
+  list-style: none;
 }
 
 .navbar__list-item {
@@ -86,9 +96,9 @@ code {
 
 /* Main Section styles */
 .main-documentation {
+  width: 100%;
   margin-top: 250px;
   padding: 1rem;
-  width: 100%;
 }
 
 .main-section {
@@ -99,7 +109,12 @@ code {
 .main-section__list {
   padding-left: 1rem;
   padding-bottom: 1rem;
-  list-style: inside;
+}
+
+.img-main {
+  display: block;
+  width: 100%;
+  max-width: 700px;
 }
 
 .code-block {
@@ -107,6 +122,18 @@ code {
   white-space: pre;
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+.introduction p {
+  font-size: 1.2rem;
+}
+
+.further-resources__list {
+  padding-left: 1rem;
+}
+
+.further-resources__list li {
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
