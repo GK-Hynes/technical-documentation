@@ -27,8 +27,8 @@ img {
 
 h2,
 h3,
-h4,
-p {
+h4 {
+  color: #221d3d;
   margin-bottom: 1rem;
 }
 
@@ -42,6 +42,10 @@ h3 {
 
 h4 {
   font-size: 1.2rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 code {
@@ -58,7 +62,7 @@ code {
   left: 0;
   width: 100%;
   height: 250px;
-  background: #333;
+  background: #221d3d;
   color: #fff;
 }
 
@@ -83,7 +87,7 @@ code {
 .navbar__list-item:hover,
 .navbar__list-item:focus {
   background: #fff;
-  color: #333;
+  color: #221d3d;
 }
 
 .nav-link {
