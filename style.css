@@ -16,10 +16,28 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
   list-style: none;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
+}
+
+code {
+  font: inherit;
+  background: #f4f4ff;
+  padding: 0.2rem;
 }
 
 /* Navbar styles */
@@ -75,6 +93,11 @@ ul {
 .main-section {
   width: 100%;
   padding: 1rem;
+}
+
+.main-section__list {
+  padding-bottom: 1rem;
+  list-style: inside;
 }
 
 @media (min-width: 768px) {

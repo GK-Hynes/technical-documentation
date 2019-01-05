@@ -20,7 +20,7 @@ At the centre of each box is the content box, where the contents of the box are 
 
 ### Padding
 
-Next comes padding. This is the space on the inside of the element between the content and the element's border. The padding on all four sides of the box can be set at once using the `padding` property or it can be set on each side individually using `padding-top`, `padding-right`, `padding-bottom`, `padding-left`.
+Next comes padding. This is the space on the inside of the element between the content and the element's border. The padding on all four sides of the box can be set at once using the `padding` property or it can be set on each side individually using `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`.
 
 If you give an element padding, its total width and height will be `width` and `height` plus whatever padding you set. So an element with a `width` of 250px and `padding` of 10px will have a total width of 270px (`padding-left` + `width` + `padding-right`).
 
@@ -30,7 +30,7 @@ If you give an element a background colour, that colour will extend to the edge 
 
 ### Border
 
-An element's border comes between its padding and its margin. By default the border is set to 0, making it invisible. The `border` property is a shorthand way to set the border's thickness, style and colour, for example `border: 5px solid green;`. These properties can also be set individually using `border-width`, `border-style`, `border-color`.
+An element's border comes between its padding and its margin. By default the border is set to 0, making it invisible. The `border` property is a shorthand way to set the border's thickness, style and colour, for example `border: 5px solid green;`. These properties can also be set individually using `border-width`, `border-style`, and `border-color`.
 
 Like with `padding`, the `border` property is shorthand for `border-top`, `border-right`, `border-bottom`, `border-left`, which can each be set individually.
 

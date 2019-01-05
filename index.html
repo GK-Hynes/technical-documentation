@@ -10,90 +10,217 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar">
-      <header class="navbar__header">
+  <nav id="navbar" class="navbar">
+    <header class="navbar__header">
+      <a href="#">
         <h1>CSS Documentation</h1>
+      </a>
+    </header>
+    <ul class="navbar__list">
+      <li class="navbar__list-item">
+        <a href="#Introduction" class="nav-link">Introduction</a>
+      </li>
+      <li class="navbar__list-item">
+        <a href="#The_Box_Model" class="nav-link">The Box Model</a>
+      </li>
+      <li class="navbar__list-item">
+        <a href="#CSS_Positioning" class="nav-link">CSS Positioning</a>
+      </li>
+      <li class="navbar__list-item">
+        <a href="#Z-Index" class="nav-link">Z-Index</a>
+      </li>
+      <li class="navbar__list-item">
+        <a href="#Further_Resources" class="nav-link">Further Resources</a>
+      </li>
+    </ul>
+  </nav>
+  <main id="main-doc" class="main-documentation">
+    <section class="main-section" id="Introduction">
+      <header>
+        <h2>Introduction</h2>
       </header>
-      <ul class="navbar__list">
-        <li class="navbar__list-item">
-          <a href="#Introduction" class="nav-link">Introduction</a>
-        </li>
-        <li class="navbar__list-item">
-          <a href="#The_Box_Model" class="nav-link">The Box Model</a>
-        </li>
-        <li class="navbar__list-item">
-          <a href="#CSS_Positioning" class="nav-link">CSS Positioning</a>
-        </li>
-        <li class="navbar__list-item">
-          <a href="#Z-Index" class="nav-link">Z-Index</a>
-        </li>
-        <li class="navbar__list-item">
-          <a href="#Further_Resources" class="nav-link">Further Resources</a>
-        </li>
-      </ul>
-    </nav>
-    <main id="main-doc" class="main-documentation">
-      <section class="main-section" id="Introduction">
-        <header>
-          <h2>Introduction</h2>
-        </header>
-        <article>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        </article>
-      </section>
-      <section class="main-section" id="The_Box_Model">
-        <header>
-          <h2>The Box Model</h2>
-        </header>
-        <article>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        </article>
-      </section>
-      <section class="main-section" id="CSS_Positioning">
-        <header>
-          <h2>CSS Positioning</h2>
-        </header>
-        <article>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        </article>
-      </section>
-      <section class="main-section" id="Z-Index">
-        <header>
-          <h2>Z-Index</h2>
-        </header>
-        <article>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        </article>
-      </section>
-      <section class="main-section" id="Further_Resources">
-        <header>
-          <h2>Further Resources</h2>
-        </header>
-        <article>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        </article>
-      </section>
-    </main>
+      <article>
+        <p>As far as HTML and CSS are concerned, every element on a webpage is a box. You can see this by opening the
+          developer
+          tools, going to the inspector tab, then the styles tab, and adding <code>* { border: 1px solid red; }</code>
+          (<code>*</code> is the CSS selector
+          that selects all elements).</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546287889/Screenshot_2018-12-31_Basic_CSS_freeCodeCamp_imqecp.png"
+          alt="Screenshot of freeCodeCamp Basic CSS page with elements outlined in red">
+        <p>The size of each element, and the basic ways it is positioned in relation to other elements, are determined
+          by the CSS
+          box model.</p>
+      </article>
+    </section>
+    <section class="main-section" id="The_Box_Model">
+      <header>
+        <h2>The Box Model</h2>
+      </header>
+      <article>
+        <p>The box model defines the basic structure of an element on a webpage. Every box has certain essential
+          properties: width and height, padding, border, and margin.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546688554/box-model_cefeeo.png" alt="The CSS box model as it appears in the Chrome developer tools">
+        <h3>Height and Width</h3>
+        <p>At the centre of each box is the content box, where the contents of the box are displayed, for example, any
+          text it
+          contains. The element's <code>width</code> and <code>height</code> properties set the width and height of the
+          content
+          box. By
+          default, width
+          is 100% of the available space.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/c_scale,w_450/v1546289550/html_element_whgdjm.png"
+          alt="HTML element with width and height 250px">
+        <h3>Padding</h3>
+        <p>Next comes padding. This is the space on the inside of the element between the content and the element's
+          border. The
+          padding on all four sides of the box can be set at once using the `padding` property or it can be set on each
+          side
+          individually using <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and
+          <code>padding-left</code>.</p>
+        <p>If you give an element padding, its total width and height will be <code>width</code> and <code>height</code>
+          plus
+          whatever
+          padding you set.
+          So an element with a <code>width</code> of 250px and <code>padding</code> of 10px will have a total width of
+          270px
+          (<code>padding-left</code>
+          + <code>width</code>
+          + <code>padding-right</code>).</p>
+        <p>If you give an element a background colour, that colour will extend to the edge of the padding, since the
+          padding is on
+          the "inside" of the element.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/c_scale,w_450/v1546289556/element_with_padding_vx9gky.png"
+          alt="HTML element with padding">
+        <h3>Border</h3>
+        <p>An element's border comes between its padding and its margin. By default the border is set to 0, making it
+          invisible.
+          The <code>border</code> property is a shorthand way to set the border's thickness, style and colour, for
+          example
+          <code>border: 5px
+          solid green;</code>. These properties can also be set individually using <code>border-width</code>, <code>border-style</code>,
+          and
+          <code>border-color</code>.</p>
+        <p>Like with <code>padding</code>, the <code>border</code> property is shorthand for <code>border-top</code>,
+          <code>border-right</code>,
+          <code>border-bottom</code>,
+          <code>border-left</code>, which can each be set individually.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/c_scale,w_450/v1546289564/element_with_border_aur4cf.png"
+          alt="HTML element with padding and border">
+        <h3>Margin</h3>
+        <p>The margin is the space that surrounds an elements and pushes other elements away. It exists outside the
+          element's
+          border.</p>
+        <p>If you give an element a background colour, that colour will not extend to the margin, as the margin is on
+          the
+          "outside" of the element.</p>
+        <p>Like with <code>padding</code> and <code>border</code>, the <code>margin</code> property is shorthand for
+          <code>margin-top</code>,
+          <code>margin-right</code>,
+          <code>margin-bottom</code>,
+          and <code>margin-left</code>.</p>
+        <p>The <code>margin</code> property can accept negative values, causing elements to overlap.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/c_scale,w_450/v1546363200/element_with_margin_ctrv4w.png"
+          alt="HTML element with padding, border, and margin">
+        <h4>Sidenote: Margin Collapsing</h4>
+        <p>When elements are stacked vetically on a page and their vertical margins touch, margin collapsing can occur.
+          Here the
+          margin between the two elements is not the total of the two margins but simply whatever the bigger margin is.
+          So, an
+          element with <code>margin-bottom: 20px;</code> and the next element with <code>margin-top: 15px;</code> will
+          have a
+          margin between
+          them of
+          20px, not 35px.</p>
+        <p>Margin collapsing does not happen to horizontal margins.</p>
+        <p>If the two margins are equal, the total margin will simply be the margin of one of the elements.</p>
+        <p>If one margin is negative, it is subtracted from the positive margin to leave the total margin.</p>
+        <p>If both margins are negative, the total will be the most negative margin.</p>
+        <p>In the same way, margin collapsing happens when the vertical margin of a child element meets the vertical
+          margin of its
+          parent element. The child element's margin will be overridden by its parent's margin. This can be prevented
+          by
+          seperating the margins of the parent and child elements by adding padding or border to the parent element.</p>
+        <h3>Box-sizing</h3>
+        <p>The <code>box-sizing</code> property tells the browser how it should calculate the total width and height of
+          an
+          element. By
+          default, <code>box-sizing</code> is set to <code>content-box</code>. That means that the width and height you
+          assign to
+          an element
+          are only
+          applied to the content and then padding and border are added on top. An element with a <code>width</code> of
+          500px,
+          <code>padding</code> of
+          25px and <code>border</code> of 5px, will have an actual total width of 560px.</p>
+        <p>By setting <code>box-sizing</code> to <code>border-box</code>, the browser will factor padding and border
+          into the
+          values you
+          specify for
+          <code>width</code> and <code>height</code>, and so removes the need for extra calculations. The content box
+          will shrink
+          so that
+          total width
+          and height matches the <code>width</code> and <code>height</code> values. This makes sizing easier and so
+          <code>box-sizing:
+          border-box;</code>
+          is often
+          included in CSS resets.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546372213/box-sizing_ufd0ly.png" alt="Screenhsot of two divs demonstrating the box-sizing property">
+      </article>
+    </section>
+    <section class="main-section" id="CSS_Positioning">
+      <header>
+        <h2>CSS Positioning</h2>
+      </header>
+      <article>
+        <p>HTML without CSS will display each element one after another down the page in the order they appear in the
+          HTML file.
+          This is the normal layout flow of the document.</p>
+        <p>The CSS `position` property lets you take elements out of the normal flow and position them where you want
+          them
+          to be,
+          for example overlapping each other, or stuck to the browser viewport.</p>
+        <p>`position` can take a number of values:</p>
+        <ul class="main-section__list">
+          <li>static</li>
+          <li>relative</li>
+          <li>absolute</li>
+          <li>fixed</li>
+          <li>sticky</li>
+        </ul>
+        <h3>Static Positioning</h3>
+        <p>The default value for the <code>position</code> property is <code>static</code>. A statically positioned
+          element will
+          appear in
+          its normal
+          position in the document layout flow and scrolls when you scroll the page.</p>
+      </article>
+    </section>
+    <section class="main-section" id="Z-Index">
+      <header>
+        <h2>Z-Index</h2>
+      </header>
+      <article>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+      </article>
+    </section>
+    <section class="main-section" id="Further_Resources">
+      <header>
+        <h2>Further Resources</h2>
+      </header>
+      <article>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+      </article>
+    </section>
+  </main>
 </body>
 
 </html>
