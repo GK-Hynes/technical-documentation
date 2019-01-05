@@ -94,7 +94,7 @@ The default value for the `position` property is `static`. A statically position
 
 ### Relative Positioning
 
-Relative positioning places an element "relative" to its normal posiiton in the layout flow. By itself, `position: relative` won't make an change to where an element appears on the page. It still occupies its normal place in the layout, just as if it was positioned statically.
+Relative positioning places an element "relative" to its normal posiiton in the layout flow. By itself, `position: relative` won't make any change to where an element appears on the page. It still occupies its normal place in the layout, just as if it was positioned statically.
 
 ![Screenshot of two divs positioned relative and fixed](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546462467/relative-no-offsets_laxqai.png)
 

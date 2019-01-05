@@ -30,13 +30,14 @@ img {
 
 h2,
 h3,
+h4,
 p {
   margin-bottom: 1rem;
 }
 
 code {
   font: inherit;
-  background: #f4f4ff;
+  background: #f4f4f4;
   padding: 0.2rem;
 }
 
@@ -96,8 +97,15 @@ code {
 }
 
 .main-section__list {
+  padding-left: 1rem;
   padding-bottom: 1rem;
   list-style: inside;
+}
+
+.code-block {
+  display: block;
+  white-space: pre;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {

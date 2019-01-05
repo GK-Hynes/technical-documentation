@@ -176,11 +176,12 @@
         <p>HTML without CSS will display each element one after another down the page in the order they appear in the
           HTML file.
           This is the normal layout flow of the document.</p>
-        <p>The CSS `position` property lets you take elements out of the normal flow and position them where you want
+        <p>The CSS <code>position</code> property lets you take elements out of the normal flow and position them where
+          you want
           them
           to be,
           for example overlapping each other, or stuck to the browser viewport.</p>
-        <p>`position` can take a number of values:</p>
+        <p><code>position</code> can take a number of values:</p>
         <ul class="main-section__list">
           <li>static</li>
           <li>relative</li>
@@ -194,6 +195,76 @@
           appear in
           its normal
           position in the document layout flow and scrolls when you scroll the page.</p>
+        <h3>Relative Positioning</h3>
+        <p>Relative positioning places an element "relative" to its normal posiiton in the layout flow. By itself,
+          <code>position:
+          relative</code> won't make any change to where an element appears on the page. It still occupies its normal
+          place in
+          the
+          layout, just as if it was positioned statically.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546462467/relative-no-offsets_laxqai.png"
+          alt="Screenshot of two divs positioned relative and fixed">
+        <p>However, once an element is positioned relative, you can use the <code>top</code>, <code>right</code>,
+          <code>bottom</code> and
+          <code>left</code>
+          properties (the
+          offset properties) to move it around. The offset properties push an element away from its normal position.</p>
+        <p>The following code will move an element down 50px and right 50px:</p>
+        <code class="code-block">div {
+          position: relative;
+          top: 50px;
+          left: 50px;
+        }</code>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546462658/position-relative_fsmuhp.png" alt="Screenshot of two divs demonstrating posiiton relative">
+        <p>Other elements will not move away from the new position of the relatively positioned element (as far as they
+          are
+          concerned, it is still in its normal position). Relatively positoned elements will appear on top of
+          statically
+          positioned elements. See <a href="#Z-Index"><code>z-index</code>.</p>
+        <h3>Absolute Positioning</h3>
+        <p>Absolute positioning removes an element from its normal position in the layout flow altogether and places it
+          on its own layer. As far as the other elements are concerned, it no longer exists, and so elements coming
+          after it in
+          the HTML document will move up to occupy its now "empty" position.</p>
+        <p>An absolutely positioned element doesn't affect the position of other elements and isn't affected by them.
+          This can be useful when creating isolated UI elements such as popups and modals.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546463237/position-absolute_gxui2t.png" alt="Screenshot of two divs demonstrating absolute positioning">
+        <p>Like with relatively positioned elements, absolutely positioned elements can be moved around using the
+          <code>top</code>, <code>right</code>,
+          <code>bottom</code> and <code>left</code> offset properties.</p>
+        <p>But there is an important difference.</p>
+        <p>With relatively positioned elements, the offsets tell it how far to move in a particular direction away from
+          to its
+          normal position.</p>
+        <p>With absolutely positioned elements, the offsets tell it how far it should be from each side of the element
+          that
+          contains it.</p>
+
+        <h4>Absolute Positioning and Positioning Context</h4>
+        <p>The "containing element" of an absolutely positioned element is determined by the position properties of its
+          parent
+          elements.</p>
+        <p>If all of the ancestor elements of the abolsutely positioned element are statically positioned (for example,
+          if their position properties aren't explicitly defined), then its "containing element" is the <code>html</code>
+          element, which
+          in practice means the viewport.</p>
+        <p>If you don't want the absolutely positoned element to be positioned according to the viewport, you need to
+          give one of its ancestor elements a position other than static, usually by setting one of its ancestor
+          elements to <code>position: relative</code>, for example the <code>body</code> element. You can then move the
+          absolutely
+          positioned element away from its "containing element" using the <code>top</code>, <code>right</code>,
+          <code>bottom</code> and
+          <code>left</code> offsets.</p>
+        <p>In the first screenshot below the container is positioned statically and so the absolutely positioned div's
+          offsets
+          position it in relation to the viewport.</p>
+        <p>In the second screenshot, the container is positioned relatively and so the absolutely positioned div's
+          offsets
+          position it in relation to the container.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546548991/absolute-element-with-static-container_eqli2d.png"
+          alt="Screenshot of an absolutely positioned div inside a statically positioned container">
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549063/absolute-element-with-relative-container_cl43ks.png"
+          alt="Screenshot of absolutely positoned div inside a relatively positioned container">
       </article>
     </section>
     <section class="main-section" id="Z-Index">
