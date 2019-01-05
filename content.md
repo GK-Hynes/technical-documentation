@@ -180,7 +180,7 @@ The following code will cause an element to stick to the viewport once it reache
 }
 ```
 
-![Gif of four divs demonstrating sticky positioning]()
+![Gif of four divs demonstrating sticky positioning](https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546637073/position-sticky_2_jcgb7s.gif)
 
 ## Z-index
 

@@ -265,6 +265,44 @@
           alt="Screenshot of an absolutely positioned div inside a statically positioned container">
         <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549063/absolute-element-with-relative-container_cl43ks.png"
           alt="Screenshot of absolutely positoned div inside a relatively positioned container">
+        <h3>Fixed Positioning</h3>
+        <p>Fixed positioning works in a similar way to absolute positioning. While absolute positioning places an
+          element in
+          relation to either the <code>html</code> element or an ancestor element that isn't statically positioned,
+          fixed
+          positioning
+          places an element in relation to the viewport.</p>
+        <p>When the page is scrolled, the fixed element stays in place on the viewport and other elements scroll past
+          it. This is
+          useful for putting UI items in a fixed place, such as the navbar at the top of the viewport.</p>
+        <p>Like with absolute positioning, fixed positioning takes the element out of the normal layout flow and other
+          elements
+          will move up to fill its "empty" position.</p>
+        <p>Elements that are positioned fixed can also be moved around using the <code>top</code>, <code>right</code>,
+          <code>bottom</code> and
+          <code>left</code> offsets. You
+          might position a navbar at the top of the viewport using:</p>
+        <code class="code-block">.navbar {
+  position: fixed;
+  top: 0;
+}</code>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546551342/position-fixed_elsjfx.png" alt="Screenshot of divs and navbar demonstrating position fixed">
+        <h3>Sticky Positioning</h3>
+        <p>Sticky positioning is newer than the other types of positioning. It basically allows an element to behave
+          like it is
+          relatively positioned until it reaches a certain distance from the top of the viewport (defined by its
+          offsets) at
+          which time is acts like it has fixed positioning.</p>
+        <p>This could be used to cause a nav or a media player to scroll with the rest of the page until it reaches the
+          top of the
+          viewport and then stick there.</p>
+        <p>The following code will cause an element to stick to the viewport once it reaches 20px from the top of the
+          viewport.</p>
+        <code class="code-block">.sticky {
+  position: sticky;
+  top: 20px;
+}</code>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546637073/position-sticky_2_jcgb7s.gif" alt="Gif of four divs demonstrating sticky positioning">
       </article>
     </section>
     <section class="main-section" id="Z-Index">
@@ -272,11 +310,28 @@
         <h2>Z-Index</h2>
       </header>
       <article>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, inventore.</p>
+        <p>Moving an element away from its "normal" positioning can cause elements to overlap. By default, positioned
+          elements
+          (those given a <code>position</code> value such as <code>relative</code> or <code>absolute</code>) appear on
+          top of
+          static
+          elements.</p>
+        <p>The property which allows you to decide which element appears on top is the <code>z-index</code>.</p>
+        <p>While offsets move elements around on the x-axis and y-axis, <code>z-index</code> moves elements on the
+          z-axis, that
+          is, closer to
+          the screen or further away from it.</p>
+        <p>By default, all positioned elements have a <code>z-index</code> of <code>auto</code>, which is the same as
+          setting the
+          <code>z-index</code> to
+          0.
+          (Statically positioned elements cannot take a <code>z-index</code> value).</p>
+        <p>Higher <code>z-index</code> values make elements appear closer to the screen and lower <code>z-index</code>
+          values make
+          them
+          appear further
+          back. You can set <code>z-index</code> to negative values to put an element behind another element.</p>
+        <img src="https://res.cloudinary.com/gerhynes/image/upload/q_auto/v1546549449/z-index_nva7qn.png" alt="Screenshot of two divs demonstrating z-index">
       </article>
     </section>
     <section class="main-section" id="Further_Resources">
